@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Edit this note</h1>
+  <form method="post" action="/edit" name="edit">
+  	<input type="hidden" name="_method" value="put">
+    <input type="text" name="title" value="<%= @note.title %>" />
+    <input type="text" name="content" value="<%= @note.content %>" />
+    <input type="hidden" name="id" value="<%= @note.id %>" />
+    <input type="submit" value="Edit Note" />
+  </form>
+  <form method="get" action="/" name="home">
+  	<input type="submit" value="Go Back" />
+  </form>
+</div>
